@@ -15,7 +15,7 @@ $('document').ready(function() {
 
     var typed = new Typed('.typing', {
         strings: ['Youtuber', 'web developer',
-            'web designer', 'Freelencer', 'Blogger'
+            'web designer', 'Freelencer',
         ],
         smartBackspace: true,
         typeSpeed: 100,
@@ -24,7 +24,7 @@ $('document').ready(function() {
     });
     var typed = new Typed('.typing-2', {
         strings: ['Youtuber', 'web developer',
-            'web designer', 'Freelencer', 'Blogger'
+            'web designer', 'Freelencer',
         ],
         smartBackspace: true,
         typeSpeed: 100,
