@@ -1,0 +1,746 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+}
+
+
+/*--NAVBAR CSS--*/
+
+.scroll-up-btn {
+    width: 40px;
+    height: 37px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: crimson;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.scroll-up-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    /*background: crimson;*/
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 999;
+}
+
+.navbar.sticky {
+    padding: 10px 0;
+    background: crimson;
+    transition: .5s ease-in-out;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+    transform: .5s;
+}
+
+.navbar .max-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: -2px -1px rgba(255, 0, 0, 0.856);
+}
+
+.navbar .logo a span {
+    color: crimson;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+}
+
+.navbar .menu li a:hover {
+    color: crimson;
+    transition: .4s;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+
+
+/*--menu btn--*/
+
+.menu-btn {
+    color: #fff;
+    font-size: 30px;
+    display: none;
+}
+
+.menu-btn i.active::before {
+    content: "\f00d";
+}
+
+
+/*--home section---*/
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 99vh;
+    background: linear-gradient(rgba(51, 51, 51, 0.315), rgba(51, 51, 51, 0.295)), url(IMG_3411.JPG) no-repeat center;
+    background-size: cover;
+    min-height: 500px;
+    color: #fff;
+}
+
+.home .home-contant a {
+    font-size: 25px;
+    color: #fff;
+    background: crimson;
+    padding: 6px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: 2px solid crimson;
+    transition: all .3s ease;
+}
+
+.home .home-contant a:hover {
+    background: none;
+}
+
+.home .home-contant .text-1 {
+    font-size: 30px;
+}
+
+.home .home-contant .text-2 {
+    font-size: 80px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+
+.home .home-contant .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-contant .text-3 span {
+    color: rgb(240, 12, 58);
+    font-weight: 500;
+}
+
+
+/*--about section--*/
+
+.about {
+    padding: 100px 0;
+}
+
+section .tittle {
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+section .tittle::before {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .tittle::after {
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    bottom: -10px;
+    padding: 0 5px;
+    transform: translateX(-50%);
+    background: #fff;
+}
+
+.about .tittle::after {
+    content: "who i am";
+}
+
+.about .about-contant .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.about .about-contant .left {
+    width: 45%;
+}
+
+.about .about-contant .right {
+    width: 55%;
+}
+
+.about .about-contant .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.about .about-contant .right .text span {
+    color: crimson;
+}
+
+.about .about-contant .right p {
+    text-align: justify;
+}
+
+.about .about-contant a {
+    font-size: 20px;
+    color: #fff;
+    background: crimson;
+    padding: 5px 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: 2px solid crimson;
+    font-weight: 500;
+    transition: all .4s ease;
+}
+
+.about .about-contant a:hover {
+    color: crimson;
+    background: none;
+}
+
+.about .about-contant,
+.service .serv-content,
+.skill-contant,
+.contact-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/*--services section--*/
+
+.service,
+.team {
+    background: #111;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.service .tittle::after,
+.team .tittle::after {
+    content: "what i provide";
+    background: #111;
+}
+
+.service .tittle::before,
+.team .tittle::before {
+    background: #fff;
+}
+
+.service .serv-content .card {
+    background: #222;
+    text-align: center;
+    padding: 25px 30px;
+    width: 32%;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.service .serv-content .card .box {
+    transition: all .5s ease;
+}
+
+.service .serv-content .card:hover {
+    background: crimson;
+}
+
+.service .serv-content .card:hover i {
+    color: #fff;
+}
+
+.service .serv-content .card .box:hover {
+    transform: scale(1.05);
+}
+
+.service .serv-content .card i {
+    font-size: 50px;
+    color: crimson;
+}
+
+.service .serv-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+/*--skill section--*/
+
+.skill {
+    padding: 100px 0;
+}
+
+.skill .tittle::after {
+    content: "what i know"
+}
+
+.skill .skill-contant .collum {
+    width: 48%;
+}
+
+.skill .skill-contant .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skill .skill-contant .right .bars {
+    margin-bottom: 15px;
+}
+
+.skill .skill-contant .left p {
+    text-align: justify;
+}
+
+.skill .skill-contant .left a {
+    font-size: 20px;
+    color: #fff;
+    background: crimson;
+    padding: 5px 15px;
+    margin-top: 30px;
+    border-radius: 5px;
+    display: inline-block;
+    border: 2px solid crimson;
+    font-weight: 500;
+    transition: all .4s ease;
+}
+
+.skill .skill-contant .left a:hover {
+    color: crimson;
+    background: none;
+}
+
+.skill .skill-contant .bars .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill .skill-contant .right .bars span {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.skill .skill-contant .right .line {
+    width: 100%;
+    height: 7px;
+    background: lightgray;
+    position: relative;
+    margin: -8px 0 10px 0;
+    border-radius: 5px;
+}
+
+.skill .skill-contant .right .line::before {
+    content: "";
+    width: 92%;
+    background: crimson;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.skill .skill-contant .right .css::before {
+    width: 80%;
+}
+
+.skill .skill-contant .right .js::before {
+    width: 65%;
+}
+
+.skill .skill-contant .right .php::before {
+    width: 77%;
+}
+
+.skill .skill-contant .right .mysql::before {
+    width: 60%;
+}
+
+
+/*--team section--*/
+
+.team .tittle::after {
+    content: "Who with me";
+}
+
+.team .carousel .card {
+    width: 93%;
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+.team .carousel .card:hover {
+    background: crimson;
+}
+
+.team .carousel .card:hover img {
+    border-color: #fff;
+    transition: all .4s ease;
+}
+
+.team .carousel .card:hover .text {
+    color: #fff;
+}
+
+.team .carousel .card .text {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: crimson;
+}
+
+.team .carousel .box {
+    transition: all .4s ease;
+}
+
+.team .carousel .box:hover {
+    transform: scale(1.06);
+}
+
+.team .carousel .box img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    margin: auto;
+}
+
+.owl-carousel .owl-nav button {
+    display: none;
+}
+
+.owl-dots .owl-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: .4s;
+    border: 2px solid crimson!important;
+    outline: none;
+    margin-left: 15px;
+}
+
+.owl-dots {
+    margin-top: 18px;
+    text-align: center;
+}
+
+button.owl-dot:hover,
+button.owl-dot.active {
+    background: crimson !important;
+}
+
+
+/*--contact section--*/
+
+.contact {
+    padding: 100px 0;
+}
+
+.contact .tittle:after {
+    content: "Get in touch"
+}
+
+.contact .collum {
+    width: 48%;
+}
+
+.contact .collum .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .left .icon {
+    margin: 10px 0;
+}
+
+.contact .left .row {
+    display: flex;
+    align-items: center;
+}
+
+.contact .left .row .info {
+    margin-left: 30px;
+}
+
+.contact .left .row i {
+    font-size: 25px;
+    color: crimson;
+    width: 20px;
+}
+
+.contact .left p {
+    text-align: justify;
+}
+
+.contact .left .row .info .head {
+    font-weight: 600;
+}
+
+.contact .left .row .info .subtittle {
+    color: #333;
+}
+
+.contact .right form .fields {
+    display: flex;
+}
+
+.contact .right form .fields .name {
+    margin-right: 10px;
+}
+
+.contact .right form .field {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 13px;
+}
+
+.contact .right form .textarea {
+    height: 150px;
+    width: 100%;
+}
+
+.contact .right form .field input,
+.contact .right form textarea {
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+    padding: 0 15px;
+    border-radius: 6px;
+    font-size: 17px;
+    outline: none;
+}
+
+.contact .right form button {
+    height: 47px;
+    width: 100%;
+    background: crimson;
+    color: #fff;
+    border: 2px solid crimson;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+.contact .right form button:hover {
+    background: none;
+    color: crimson;
+}
+
+
+/*--footer-section--*/
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+
+footer span a {
+    color: crimson;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width:1150px) {
+    .about .about-contant .collum {
+        width: 50%;
+    }
+    .about .about-contant .left img {
+        height: 350px;
+        width: 350px;
+    }
+    .team .carousel .box {
+        padding: 20px 25px;
+    }
+    .team .carousel .card .text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:892px) {
+    .max-width {
+        padding: 0 50px;
+    }
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all .4s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 15px 0;
+        font-size: 25px;
+    }
+    .home .home-contant .text-1 {
+        font-size: 25px;
+    }
+    .home .home-contant .text-2 {
+        font-size: 70px;
+    }
+    .home .home-contant .text-3 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:850px) {
+    .about .about-contant .collum {
+        width: 100%;
+    }
+    .about .about-contant .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-contant .right {
+        flex: 100%;
+    }
+    .service .serv-content .card {
+        width: 48.5%;
+        margin-bottom: 20px;
+    }
+    .skill .skill-contant .collum {
+        width: 100%;
+    }
+    .skill .skill-contant .left {
+        margin-bottom: 40px;
+    }
+    .skill .skill-contant .left a {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+    .contact .collum {
+        width: 100%;
+    }
+    .contact .right {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:576px) {
+    .max-width {
+        padding: 0 30px;
+    }
+    .home .home-contant .text-1 {
+        font-size: 20px;
+    }
+    .home .home-contant .text-2 {
+        font-size: 60px;
+    }
+    .home .home-contant .text-3 {
+        font-size: 25px;
+    }
+    .home .home-contant a {
+        font-size: 20px;
+        padding: 4px 15px;
+    }
+    .about .about-contant .left img {
+        height: 350px;
+        width: 350px;
+    }
+    .service .serv-content .card {
+        width: 100%;
+    }
+}
+
+@media (max-width:370px) {
+    .max-width {
+        padding: 0 10px;
+    }
+    .about .about-contant .left img {
+        height: 250px;
+        width: 250px;
+    }
+    .home .home-contant .text-1 {
+        font-size: 18px;
+    }
+    .home .home-contant .text-2 {
+        font-size: 50px;
+    }
+    .home .home-contant .text-3 {
+        font-size: 20px;
+    }
+    .service .tittle::after {
+        font-size: 16px;
+    }
+}
